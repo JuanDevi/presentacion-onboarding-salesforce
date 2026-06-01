@@ -1937,6 +1937,194 @@ html, body {
   .ai-solutions-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Height-based media queries for fullscreen/laptop displays to prevent overflow */
+@media (max-height: 850px) {
+  :root {
+    --slide-padding: 24px;
+    --slide-padding-h: 40px;
+  }
+  .slide-title {
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+  }
+  .slide-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  .slide-footer {
+    bottom: 8px;
+  }
+  
+  /* Slide 8 */
+  .stat-highlight {
+    padding: 10px 20px;
+    gap: 12px;
+  }
+  .stat-big {
+    font-size: 1.8rem;
+  }
+  .stat-desc {
+    font-size: 0.85rem;
+  }
+  .cards-four {
+    gap: 10px;
+  }
+  .card-trend {
+    padding: 12px;
+  }
+  .trend-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  .card-trend h4 {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  .card-trend p {
+    font-size: 0.75rem;
+  }
+
+  /* Slide 9 */
+  .priority-row {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+  .priority-need {
+    font-size: 11px;
+  }
+  .solution-tag {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  /* Slide 14 */
+  .crm-cards {
+    gap: 10px;
+  }
+  .crm-card {
+    padding: 12px 16px;
+  }
+  .crm-card-header {
+    margin-bottom: 4px;
+  }
+  .crm-icon {
+    font-size: 20px;
+  }
+  .crm-card h4 {
+    font-size: 0.95rem;
+  }
+  .crm-card p {
+    font-size: 11px;
+  }
+  .crm-amount {
+    font-size: 0.95rem;
+  }
+
+  /* Slide 16 */
+  .stakeholder-grid {
+    gap: 10px;
+  }
+  .stakeholder-card {
+    padding: 10px 14px;
+  }
+  .stakeholder-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .stakeholder-info h4 {
+    font-size: 0.8rem;
+  }
+  .stakeholder-title {
+    font-size: 0.68rem;
+  }
+  .stakeholder-role {
+    font-size: 0.65rem;
+    margin-bottom: 4px;
+  }
+  .stakeholder-rel {
+    font-size: 9px;
+    padding: 1px 6px;
+    margin-bottom: 4px;
+  }
+  .stakeholder-question {
+    font-size: 0.68rem;
+    padding-top: 4px;
+  }
+
+  /* Slide 17 */
+  .team-grid {
+    gap: 10px;
+  }
+  .team-card {
+    padding: 10px;
+  }
+  .team-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .team-card h4 {
+    font-size: 0.78rem;
+    margin-bottom: 2px;
+  }
+  .team-role {
+    font-size: 0.68rem;
+    margin-bottom: 2px;
+  }
+  .team-channel {
+    font-size: 0.65rem;
+  }
+
+  /* Slide 19 */
+  .maturity-intro {
+    padding: 10px 16px;
+    margin-bottom: 10px;
+  }
+  .maturity-intro p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .maturity-header, .maturity-row {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-height: 720px) {
+  :root {
+    --slide-padding: 16px;
+    --slide-padding-h: 32px;
+  }
+  .slide-title {
+    font-size: 1.4rem;
+  }
+  .slide-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+  .card-elevated {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+  .card-elevated h3 {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  .card-elevated p {
+    font-size: 0.78rem;
+  }
+  .priority-row {
+    padding: 8px 12px;
+  }
+  .maturity-header, .maturity-row {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }

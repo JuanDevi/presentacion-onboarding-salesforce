@@ -14,8 +14,25 @@
   const progressBar = document.getElementById('progressBar');
   const slideCounter = document.getElementById('slideCounter');
 
+  // ---- Scale & Wrap ----
+  function wrapSlides() {
+    const area = document.createElement('div');
+    area.id = 'presentation-area';
+    document.body.appendChild(area);
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(s => area.appendChild(s));
+    
+    function resize() {
+      const scale = Math.min(window.innerWidth / 1440, window.innerHeight / 900);
+      area.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+  }
+
   // ---- Initialize ----
   function init() {
+    wrapSlides();
     updateProgress();
     updateCounter();
     setupKeyboard();

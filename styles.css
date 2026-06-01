@@ -111,12 +111,23 @@ html, body {
 }
 
 /* ---- Slides Base ---- */
+#presentation-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1440px;
+  height: 900px;
+  transform-origin: center center;
+  overflow: hidden;
+  background: var(--sf-white);
+}
+
 .slide {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: none !important;
   flex-direction: column;
   overflow: hidden;
@@ -1935,101 +1946,6 @@ html, body {
   .stakeholder-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(3, 1fr); }
   .ai-solutions-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* Height-based media queries for fullscreen/laptop displays to prevent overflow */
-@media (max-height: 850px) {
-  :root {
-    --slide-padding: 24px;
-    --slide-padding-h: 40px;
-  }
-  .slide-title {
-    font-size: 1.8rem;
-    margin-bottom: 4px;
-  }
-  .slide-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-  }
-  .slide-footer {
-    bottom: 8px;
-  }
-  
-  /* Prevent grids from stretching awkwardly tall in fullscreen */
-  .cards-four, .competitor-grid, .stakeholder-grid, .team-grid, .ai-solutions-grid, .crm-cards {
-    align-content: center;
-    gap: 12px;
-  }
-
-  /* Slide 8 */
-  .stat-highlight {
-    padding: 12px 24px;
-  }
-  .stat-big {
-    font-size: 2.2rem;
-  }
-
-  /* Slide 9 */
-  .priority-table {
-    justify-content: center;
-  }
-  .priority-row {
-    padding: 12px 20px;
-    gap: 16px;
-  }
-
-  /* Slide 14 */
-  .crm-card {
-    padding: 16px 20px;
-  }
-
-  /* Slide 16 */
-  .stakeholder-card {
-    padding: 14px 16px;
-  }
-  .stakeholder-avatar {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 8px;
-  }
-
-  /* Slide 17 */
-  .team-card {
-    padding: 14px;
-  }
-  .team-avatar {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
-  }
-
-  /* Slide 19 */
-  .maturity-table {
-    justify-content: center;
-  }
-  .maturity-intro {
-    padding: 12px 20px;
-    margin-bottom: 14px;
-  }
-  .maturity-header, .maturity-row {
-    padding: 10px 20px;
-  }
-}
-
-@media (max-height: 720px) {
-  :root {
-    --slide-padding: 20px;
-    --slide-padding-h: 36px;
-  }
-  .slide-title {
-    font-size: 1.6rem;
-  }
-  .priority-row, .maturity-row, .maturity-header {
-    padding: 8px 16px;
-  }
-  .card-elevated, .card-trend, .stakeholder-card, .team-card, .crm-card {
-    padding: 12px;
-  }
 }
 
 /* Scrollbar */

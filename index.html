@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding Certification – Etapa 1: Account Strategy – D-local</title>
+  <meta name="description" content="Salesforce Onboarding Certification Etapa 1 – Account Strategy Walkthrough for D-local by Juan Ignacio De Vincenti">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navigation -->
+  <nav class="slide-nav" id="slideNav">
+    <button class="nav-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <span class="slide-counter" id="slideCounter">1 / 20</span>
+    <button class="nav-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <button class="nav-btn fullscreen-btn" onclick="toggleFullscreen()" aria-label="Toggle fullscreen">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+    </button>
+  </nav>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 1: COVER -->
+  <!-- ========================================= -->
+  <section class="slide slide-cover active" data-slide="1" id="slide-1">
+    <div class="cover-bg">
+      <div class="cover-gradient"></div>
+      <div class="cover-particles" id="coverParticles"></div>
+      <div class="cover-glow"></div>
+    </div>
+    <div class="sf-logo-cover" style="left: auto; right: 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" style="height: 80px;">
+    </div>
+    <div class="cover-content">
+      <div class="cover-badge animate-fade-up">Onboarding Certification | FY2027</div>
+      <h1 class="cover-title animate-fade-up delay-1">
+        <span class="cover-highlight">Account Strategy</span>
+        <span class="cover-subtitle-line">Walkthrough</span>
+      </h1>
+      <div class="cover-meta animate-fade-up delay-2">
+        <div class="cover-account">
+          <span class="cover-label">Cuenta</span>
+          <div class="cover-value" style="background: rgba(255, 255, 255, 0.95); padding: 10px 20px; border-radius: 12px; display: inline-block; margin-top: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <img src="assets/dlocal-logo.png" alt="D-local" style="height: 35px; display: block;">
+          </div>
+        </div>
+        <div class="cover-divider"></div>
+        <div class="cover-exec">
+          <span class="cover-label">Named Account Executive</span>
+          <span class="cover-value">Juan Ignacio De Vincenti</span>
+        </div>
+      </div>
+    </div>
+    <div class="cover-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+      <div class="star star-3">✦</div>
+      <div class="star star-4">✦</div>
+    </div>
+    <div class="cover-astro">
+      <svg width="140" height="140" viewBox="0 0 140 140">
+        <circle cx="70" cy="70" r="60" fill="url(#astroGrad)" opacity="0.3"/>
+        <circle cx="70" cy="70" r="40" fill="url(#astroGrad2)" opacity="0.2"/>
+        <text x="70" y="78" text-anchor="middle" font-size="50">🦝</text>
+        <defs>
+          <radialGradient id="astroGrad"><stop stop-color="#00B3FF" offset="0%"/><stop stop-color="transparent" offset="100%"/></radialGradient>
+          <radialGradient id="astroGrad2"><stop stop-color="#FFB800" offset="0%"/><stop stop-color="transparent" offset="100%"/></radialGradient>
+        </defs>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 2: AGENDA -->
+  <!-- ========================================= -->
+  <section class="slide slide-agenda" data-slide="2" id="slide-2">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="agenda-layout">
+      <div class="agenda-left">
+        <div class="agenda-wavy"></div>
+        <h2 class="agenda-title">Agenda</h2>
+        <div class="agenda-stars">
+          <span class="star-deco">✦</span>
+          <span class="star-deco sm">✦</span>
+        </div>
+      </div>
+      <div class="agenda-right">
+        <div class="agenda-grid">
+          <div class="agenda-item" data-num="01">
+            <span class="agenda-num">01</span>
+            <span class="agenda-text">Account Summary<br><small>Resumen de la Cuenta</small></span>
+          </div>
+          <div class="agenda-item" data-num="02">
+            <span class="agenda-num">02</span>
+            <span class="agenda-text">Customer North Star<br><small>La Guía del Cliente</small></span>
+          </div>
+          <div class="agenda-item" data-num="03">
+            <span class="agenda-num">03</span>
+            <span class="agenda-text">Data-Driven Decisions<br><small>Decisiones Basadas en Datos</small></span>
+          </div>
+          <div class="agenda-item" data-num="04">
+            <span class="agenda-num">04</span>
+            <span class="agenda-text">Stakeholder Management<br><small>Gestión de Partes Interesadas</small></span>
+          </div>
+          <div class="agenda-item" data-num="05">
+            <span class="agenda-num">05</span>
+            <span class="agenda-text">AI Strategy<br><small>Estrategia de IA</small></span>
+          </div>
+          <div class="agenda-item" data-num="06">
+            <span class="agenda-num">06</span>
+            <span class="agenda-text">Team Alignment<br><small>Alineación del Equipo</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 3: SEGUE — Account Summary -->
+  <!-- ========================================= -->
+  <section class="slide slide-segue" data-slide="3" id="slide-3">
+    <div class="segue-bg"></div>
+    <div class="sf-logo-segue">
+      <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+        <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+    </div>
+    <div class="segue-content">
+      <span class="segue-number">01</span>
+      <h2 class="segue-title">Account Summary</h2>
+      <p class="segue-subtitle">Resumen de la Cuenta</p>
+    </div>
+    <div class="segue-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 4: ¿Quién es D-local? -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="4" id="slide-4">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">¿Quién es D-local?</h2>
+      <p class="slide-subtitle">El primer unicornio tecnológico de Uruguay</p>
+      <div class="content-two-col">
+        <div class="content-col">
+          <div class="card-elevated">
+            <div class="card-icon">🌎</div>
+            <h3>Infraestructura Global de Pagos</h3>
+            <p>Fintech especializada en mercados emergentes de América Latina, África y Asia. Fundada en 2016, listada en <strong>NASDAQ: DLO</strong> en junio 2021.</p>
+          </div>
+          <div class="card-elevated">
+            <div class="card-icon">🔗</div>
+            <h3>Filosofía "One dLocal"</h3>
+            <p>Una única API, una sola plataforma y un solo contrato corporativo para procesar cobros y desembolsos en mercados complejos.</p>
+          </div>
+        </div>
+        <div class="content-col">
+          <div class="card-elevated highlight-card">
+            <h3>En Números</h3>
+            <div class="stat-grid">
+              <div class="mini-stat">
+                <span class="stat-number">44+</span>
+                <span class="stat-label">Países</span>
+              </div>
+              <div class="mini-stat">
+                <span class="stat-number">1,000+</span>
+                <span class="stat-label">Métodos de Pago</span>
+              </div>
+              <div class="mini-stat">
+                <span class="stat-number">760+</span>
+                <span class="stat-label">Comerciantes</span>
+              </div>
+              <div class="mini-stat">
+                <span class="stat-number">$40.8B</span>
+                <span class="stat-label">TPV FY2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="merchant-logos">
+            <span class="merchant-tag">Amazon</span>
+            <span class="merchant-tag">Google</span>
+            <span class="merchant-tag">Microsoft</span>
+            <span class="merchant-tag">Spotify</span>
+            <span class="merchant-tag">Uber</span>
+            <span class="merchant-tag">Nike</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 5: Footprint de Salesforce en D-local -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="5" id="slide-5">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Footprint de Salesforce en D-local</h2>
+      <p class="slide-subtitle">Cliente activo de Slack — Renovación cerrada FY2027</p>
+      <div class="content-two-col">
+        <div class="content-col">
+          <div class="card-elevated">
+            <div class="card-icon">💬</div>
+            <h3>Slack Business+</h3>
+            <p>~<strong>1,600 usuarios</strong> activos. Renovación por 2 años cerrada (junio 2026) con expansión en curso hacia <strong>Enterprise Plus</strong>.</p>
+            <div class="tag-row">
+              <span class="tag tag-green">Renovado</span>
+              <span class="tag tag-blue">Enterprise Plus en proceso</span>
+            </div>
+          </div>
+          <div class="card-elevated">
+            <div class="card-icon">💰</div>
+            <h3>Deal Cerrado</h3>
+            <div class="deal-metrics">
+              <div class="deal-item">
+                <span class="deal-label">ACV Incremental</span>
+                <span class="deal-value">$84K</span>
+              </div>
+              <div class="deal-item">
+                <span class="deal-label">TCV</span>
+                <span class="deal-value">$691K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-col">
+          <div class="card-elevated">
+            <h3>Pipeline Activo en CRM</h3>
+            <div class="pipeline-list">
+              <div class="pipeline-item">
+                <span class="pipeline-stage stage-initiate">01 Initiate</span>
+                <span class="pipeline-name">D-local Renewal 1600 Slack</span>
+                <span class="pipeline-amount">$345,600</span>
+              </div>
+              <div class="pipeline-item">
+                <span class="pipeline-stage stage-closed">05 Closed</span>
+                <span class="pipeline-name">D-local Renewal 1308 Slack</span>
+                <span class="pipeline-amount">$261,338</span>
+              </div>
+              <div class="pipeline-item">
+                <span class="pipeline-stage stage-active">Active</span>
+                <span class="pipeline-name">dLocal - Slack AI Add-on</span>
+                <span class="pipeline-amount">Expansión</span>
+              </div>
+            </div>
+          </div>
+          <div class="account-badge">
+            <span>📍 Financial Services | Uruguay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 6: Planes de Crecimiento -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="6" id="slide-6">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Planes de Crecimiento y Desafíos</h2>
+      <p class="slide-subtitle">Estrategia de expansión y obstáculos identificados</p>
+      <div class="content-two-col">
+        <div class="content-col">
+          <h3 class="section-label">📈 Hoja de Ruta</h3>
+          <div class="roadmap-table">
+            <div class="roadmap-row">
+              <span class="roadmap-dim">Plan Slack</span>
+              <span class="roadmap-from">Business+ (~1,600)</span>
+              <span class="roadmap-arrow">→</span>
+              <span class="roadmap-to">Enterprise Plus</span>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-dim">Productos SF</span>
+              <span class="roadmap-from">Solo Slack</span>
+              <span class="roadmap-arrow">→</span>
+              <span class="roadmap-to">Sales Cloud, Agentforce, Data Cloud</span>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-dim">Geografía</span>
+              <span class="roadmap-from">LATAM + África</span>
+              <span class="roadmap-arrow">→</span>
+              <span class="roadmap-to">+ Southeast Asia</span>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-dim">Headcount</span>
+              <span class="roadmap-from">En evaluación</span>
+              <span class="roadmap-arrow">→</span>
+              <span class="roadmap-to">+20% crecimiento en curso</span>
+            </div>
+          </div>
+        </div>
+        <div class="content-col">
+          <h3 class="section-label">⚠️ Obstáculos Identificados</h3>
+          <div class="obstacle-list">
+            <div class="obstacle-item">
+              <div class="obstacle-icon">🔧</div>
+              <div>
+                <strong>Migración técnica a Enterprise Grid</strong>
+                <p>Suspendida en 2025 — debe retomarse en FY27</p>
+              </div>
+            </div>
+            <div class="obstacle-item">
+              <div class="obstacle-icon">🔄</div>
+              <div>
+                <strong>Cambio de reseller partner</strong>
+                <p>Transición en proceso al momento de la renovación</p>
+              </div>
+            </div>
+            <div class="obstacle-item">
+              <div class="obstacle-icon">📉</div>
+              <div>
+                <strong>Compresión de márgenes</strong>
+                <p>Take rate: de 3.7% (2022) a ~2.9% (2024)</p>
+              </div>
+            </div>
+            <div class="obstacle-item">
+              <div class="obstacle-icon">🔍</div>
+              <div>
+                <strong>Riesgo reputacional</strong>
+                <p>Investigación de fraude AR y alegaciones Muddy Waters</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 7: SEGUE — Customer North Star -->
+  <!-- ========================================= -->
+  <section class="slide slide-segue" data-slide="7" id="slide-7">
+    <div class="segue-bg"></div>
+    <div class="sf-logo-segue">
+      <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+        <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+    </div>
+    <div class="segue-content">
+      <span class="segue-number">02</span>
+      <h2 class="segue-title">Customer North Star</h2>
+      <p class="segue-subtitle">La Guía del Cliente</p>
+    </div>
+    <div class="segue-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 8: Tendencias de la Industria -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="8" id="slide-8">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Dinámica de la Industria</h2>
+      <p class="slide-subtitle">Mega-tendencias en pagos digitales LATAM</p>
+      <div class="stat-highlight-bar">
+        <div class="stat-highlight">
+          <span class="stat-big">$300B+</span>
+          <span class="stat-desc">Volúmenes de pagos digitales LATAM proyectados para 2027</span>
+        </div>
+      </div>
+      <div class="cards-four">
+        <div class="card-trend">
+          <div class="trend-icon">📱</div>
+          <h4>Billeteras Digitales & A2A</h4>
+          <p><strong>46%</strong> del e-commerce LATAM (desde 21% en 2023). Pix, Mercado Pago, Nubank, Yape lideran.</p>
+        </div>
+        <div class="card-trend">
+          <div class="trend-icon">🛒</div>
+          <h4>E-commerce Global</h4>
+          <p>Crece <strong>7.2% anual</strong> en 2026, impulsado por clases medias emergentes y acceso digital.</p>
+        </div>
+        <div class="card-trend">
+          <div class="trend-icon">⚖️</div>
+          <h4>Regulación Creciente</h4>
+          <p>CNBV (MX), LGPD/PIX (BR), Superfinanciera (CO), BCRA (AR) — el cumplimiento es el producto.</p>
+        </div>
+        <div class="card-trend">
+          <div class="trend-icon">🤖</div>
+          <h4>Era Agéntica de IA</h4>
+          <p>dLocal se alinea con protocolos de pago autónomo de OpenAI, Google, Stripe, Visa y Mastercard.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 9: Prioridades & Soluciones SF -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="9" id="slide-9">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Prioridades & Soluciones Salesforce</h2>
+      <p class="slide-subtitle">Mapeo de necesidades del cliente a nuestro portafolio</p>
+      <div class="priority-table">
+        <div class="priority-row priority-header">
+          <span class="priority-need">Prioridad del Cliente</span>
+          <span class="priority-solution">Solución Salesforce</span>
+        </div>
+        <div class="priority-row">
+          <span class="priority-need">Eficiencia operativa en 44 jurisdicciones</span>
+          <span class="priority-solution"><span class="solution-tag">Slack Enterprise Grid</span> <span class="solution-tag">Agentforce</span></span>
+        </div>
+        <div class="priority-row">
+          <span class="priority-need">Soporte técnico 24/7 para 760+ comerciantes</span>
+          <span class="priority-solution"><span class="solution-tag">Service Cloud</span> <span class="solution-tag">Slack Swarming</span></span>
+        </div>
+        <div class="priority-row">
+          <span class="priority-need">Coordinación de equipos distribuidos</span>
+          <span class="priority-solution"><span class="solution-tag">Slack Sales Elevate</span> <span class="solution-tag">Sales Cloud</span></span>
+        </div>
+        <div class="priority-row">
+          <span class="priority-need">Cumplimiento regulatorio y eDiscovery</span>
+          <span class="priority-solution"><span class="solution-tag accent">Slack Enterprise Grid (DLP)</span></span>
+        </div>
+        <div class="priority-row">
+          <span class="priority-need">Monitoreo en tiempo real de TPV y tasas</span>
+          <span class="priority-solution"><span class="solution-tag">Data Cloud</span> <span class="solution-tag">Tableau</span> <span class="solution-tag">Slack Alerts</span></span>
+        </div>
+        <div class="priority-row">
+          <span class="priority-need">Integración nativa con ecosistema SF</span>
+          <span class="priority-solution"><span class="solution-tag">MuleSoft</span> <span class="solution-tag">Agentforce</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 10: Panorama Competitivo -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="10" id="slide-10">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Panorama Competitivo</h2>
+      <p class="slide-subtitle">Círculo de Influencia — NRR cayó de 150%+ a 121%</p>
+      <div class="competitor-grid">
+        <div class="competitor-card">
+          <h4 class="competitor-name">Adyen</h4>
+          <p class="competitor-pos">Adquirencia global para retail complejo</p>
+          <div class="competitor-risk"><span class="risk-label">Riesgo:</span> Solapamiento en grandes merchants</div>
+          <div class="competitor-action">💡 dLocal diferencia en mercados frontera y MoR</div>
+        </div>
+        <div class="competitor-card">
+          <h4 class="competitor-name">Stripe</h4>
+          <p class="competitor-pos">APIs para desarrolladores, expandiendo en EM</p>
+          <div class="competitor-risk"><span class="risk-label">Riesgo:</span> Opción predeterminada para SaaS</div>
+          <div class="competitor-action">💡 Slack + SF como diferencial de ecosistema unificado</div>
+        </div>
+        <div class="competitor-card">
+          <h4 class="competitor-name">Airwallex</h4>
+          <p class="competitor-pos">Pagos embebidos y emisión de tarjetas</p>
+          <div class="competitor-risk"><span class="risk-label">Riesgo:</span> Automatización y conciliación para plataformas</div>
+          <div class="competitor-action">💡 MuleSoft + Data Cloud como alternativa más profunda</div>
+        </div>
+        <div class="competitor-card">
+          <h4 class="competitor-name">Mercado Pago</h4>
+          <p class="competitor-pos">Ubicuidad regional</p>
+          <div class="competitor-risk"><span class="risk-label">Riesgo:</span> Competencia directa en billeteras</div>
+          <div class="competitor-action">💡 Colaboración y alianza potencial como cliente/partner</div>
+        </div>
+        <div class="competitor-card">
+          <h4 class="competitor-name">J.P. Morgan</h4>
+          <p class="competitor-pos">Tesorería y FX para instituciones financieras</p>
+          <div class="competitor-risk"><span class="risk-label">Riesgo:</span> Preferido por corporativos para tesorería</div>
+          <div class="competitor-action">💡 dLocal + SF como solución más ágil para EM</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 11: SEGUE — Data-Driven -->
+  <!-- ========================================= -->
+  <section class="slide slide-segue" data-slide="11" id="slide-11">
+    <div class="segue-bg"></div>
+    <div class="sf-logo-segue">
+      <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+        <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+    </div>
+    <div class="segue-content">
+      <span class="segue-number">03</span>
+      <h2 class="segue-title">Data-Driven<br>Decision Making</h2>
+      <p class="segue-subtitle">Toma de Decisiones Basada en Datos</p>
+    </div>
+    <div class="segue-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 12: Performance Financiero -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="12" id="slide-12">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Performance Financiero</h2>
+      <p class="slide-subtitle">Crecimiento acelerado año tras año</p>
+      <div class="finance-table">
+        <div class="finance-header">
+          <span class="finance-cell metric-col">Métrica</span>
+          <span class="finance-cell">FY2024</span>
+          <span class="finance-cell">FY2025</span>
+          <span class="finance-cell var-col">Var. YoY</span>
+        </div>
+        <div class="finance-row">
+          <span class="finance-cell metric-col">TPV (Total Payment Volume)</span>
+          <span class="finance-cell">$25.6B</span>
+          <span class="finance-cell">$40.8B</span>
+          <span class="finance-cell var-col positive">+60%</span>
+        </div>
+        <div class="finance-row">
+          <span class="finance-cell metric-col">Ingresos Totales</span>
+          <span class="finance-cell">$746M</span>
+          <span class="finance-cell">$1,093M</span>
+          <span class="finance-cell var-col positive">+47%</span>
+        </div>
+        <div class="finance-row">
+          <span class="finance-cell metric-col">Ganancia Bruta</span>
+          <span class="finance-cell">$294.7M</span>
+          <span class="finance-cell">$402.8M</span>
+          <span class="finance-cell var-col positive">+37%</span>
+        </div>
+        <div class="finance-row">
+          <span class="finance-cell metric-col">EBITDA Ajustado</span>
+          <span class="finance-cell">$188.7M</span>
+          <span class="finance-cell">$278.1M</span>
+          <span class="finance-cell var-col positive">+47%</span>
+        </div>
+        <div class="finance-row">
+          <span class="finance-cell metric-col">Utilidad Neta</span>
+          <span class="finance-cell">$120.5M</span>
+          <span class="finance-cell">$196.9M</span>
+          <span class="finance-cell var-col positive">+63%</span>
+        </div>
+        <div class="finance-row highlight">
+          <span class="finance-cell metric-col">Flujo de Caja Libre Adj.</span>
+          <span class="finance-cell">$90.8M</span>
+          <span class="finance-cell">$190.7M</span>
+          <span class="finance-cell var-col positive">+110%</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 13: Proyecciones & Q1 -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="13" id="slide-13">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Proyecciones 2026 & Señales Q1</h2>
+      <p class="slide-subtitle">Guidance de la dirección y aceleración en Q1</p>
+      <div class="content-two-col">
+        <div class="content-col">
+          <h3 class="section-label">📊 Guidance 2026</h3>
+          <div class="projection-cards">
+            <div class="projection-card">
+              <span class="projection-metric">Crecimiento TPV</span>
+              <span class="projection-range">50% – 60%</span>
+              <span class="projection-note">TPV proyectado: $61–65B</span>
+            </div>
+            <div class="projection-card">
+              <span class="projection-metric">Crecimiento Ganancia Bruta</span>
+              <span class="projection-range">22.5% – 27.5%</span>
+            </div>
+            <div class="projection-card">
+              <span class="projection-metric">Crecimiento Utilidad Op.</span>
+              <span class="projection-range">27.5% – 32.5%</span>
+            </div>
+          </div>
+        </div>
+        <div class="content-col">
+          <h3 class="section-label">🚀 Q1 FY2026: Aceleración</h3>
+          <div class="q1-stats">
+            <div class="q1-stat">
+              <div class="q1-value">$14.06B</div>
+              <div class="q1-label">TPV Q1 2026</div>
+              <div class="q1-growth">+73% YoY</div>
+              <div class="q1-note">6to trimestre consecutivo por encima del 50%</div>
+            </div>
+            <div class="q1-stat">
+              <div class="q1-value">$118.7M</div>
+              <div class="q1-label">Ganancia Bruta récord</div>
+              <div class="q1-growth">+40% YoY</div>
+            </div>
+            <div class="q1-stat">
+              <div class="q1-value">$51.6M</div>
+              <div class="q1-label">Utilidad neta normalizada</div>
+              <div class="q1-growth">+11% YoY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 14: Huella en CRM -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="14" id="slide-14">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Huella Actual en CRM</h2>
+      <p class="slide-subtitle">AE Home / Salesforce org62</p>
+      <div class="crm-cards">
+        <div class="crm-card main-card">
+          <div class="crm-card-header">
+            <span class="crm-icon">🏢</span>
+            <div>
+              <h4>D-local (UY)</h4>
+              <span class="crm-owner">Owner: @Juan Ignacio De Vincenti</span>
+            </div>
+          </div>
+        </div>
+        <div class="crm-card">
+          <div class="crm-card-header">
+            <span class="crm-status closed">✓ Cerrado</span>
+            <span class="crm-amount">$84,261 ACV</span>
+          </div>
+          <p>SLK - Dlocal - Renewal + Add on — Stage: 08 Closed</p>
+        </div>
+        <div class="crm-card">
+          <div class="crm-card-header">
+            <span class="crm-status active">● Activo</span>
+            <span class="crm-amount">$345K</span>
+          </div>
+          <p>Renewal 1600, Slack AI Add-on, Enterprise Plus migration</p>
+        </div>
+        <div class="crm-card">
+          <div class="crm-card-header">
+            <span class="crm-status history">📋 Historial</span>
+          </div>
+          <p>Múltiples renovaciones (812 → 1,200 → 1,275 → 1,308 → 1,600 seats) desde 2022</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 15: SEGUE — Stakeholder Management -->
+  <!-- ========================================= -->
+  <section class="slide slide-segue" data-slide="15" id="slide-15">
+    <div class="segue-bg"></div>
+    <div class="sf-logo-segue">
+      <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+        <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+    </div>
+    <div class="segue-content">
+      <span class="segue-number">04</span>
+      <h2 class="segue-title">Stakeholder<br>Management</h2>
+      <p class="segue-subtitle">Gestión de Partes Interesadas</p>
+    </div>
+    <div class="segue-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 16: Stakeholder Map -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="16" id="slide-16">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Mapa de Stakeholders — D-local</h2>
+      <p class="slide-subtitle">Contactos CRM clave y preguntas de descubrimiento</p>
+      <div class="stakeholder-grid">
+        <div class="stakeholder-card">
+          <div class="stakeholder-avatar">HC</div>
+          <div class="stakeholder-info">
+            <h4>Hernan Di Chello</h4>
+            <span class="stakeholder-title">CTO</span>
+            <span class="stakeholder-role">Decisor tecnológico clave</span>
+            <span class="stakeholder-rel no-rel">Sin relación</span>
+          </div>
+          <p class="stakeholder-question">¿Cómo está preparando la infraestructura para pagos agénticos?</p>
+        </div>
+        <div class="stakeholder-card">
+          <div class="stakeholder-avatar">JD</div>
+          <div class="stakeholder-info">
+            <h4>Javier David</h4>
+            <span class="stakeholder-title">CISO</span>
+            <span class="stakeholder-role">Seguridad, DLP, eDiscovery</span>
+            <span class="stakeholder-rel no-rel">Sin relación</span>
+          </div>
+          <p class="stakeholder-question">¿Las brechas de DLP en Business+ ya generaron incidentes?</p>
+        </div>
+        <div class="stakeholder-card">
+          <div class="stakeholder-avatar">AC</div>
+          <div class="stakeholder-info">
+            <h4>Agustin Cerisola</h4>
+            <span class="stakeholder-title">Head of Business Operations</span>
+            <span class="stakeholder-role">Eficiencia operativa</span>
+            <span class="stakeholder-rel no-rel">Sin relación</span>
+          </div>
+          <p class="stakeholder-question">¿Cuál es el mayor cuello de botella operativo hoy?</p>
+        </div>
+        <div class="stakeholder-card">
+          <div class="stakeholder-avatar">AS</div>
+          <div class="stakeholder-info">
+            <h4>Alejandro Speranza</h4>
+            <span class="stakeholder-title">VP of Sales</span>
+            <span class="stakeholder-role">Crecimiento de cartera</span>
+            <span class="stakeholder-rel no-rel">Sin relación</span>
+          </div>
+          <p class="stakeholder-question">¿Hay fricción en el onboarding de nuevos comerciantes?</p>
+        </div>
+        <div class="stakeholder-card">
+          <div class="stakeholder-avatar">CB</div>
+          <div class="stakeholder-info">
+            <h4>Carmen Beloqui</h4>
+            <span class="stakeholder-title">IT Project Manager</span>
+            <span class="stakeholder-role">Migración Slack / Enterprise Grid</span>
+            <span class="stakeholder-rel known">Contacto conocido</span>
+          </div>
+          <p class="stakeholder-question">¿Cuál fue el blocker principal de la migración 2025?</p>
+        </div>
+        <div class="stakeholder-card">
+          <div class="stakeholder-avatar">FR</div>
+          <div class="stakeholder-info">
+            <h4>Felipe Richard</h4>
+            <span class="stakeholder-title">Gerente de Innovación</span>
+            <span class="stakeholder-role">IA y transformación digital</span>
+            <span class="stakeholder-rel no-rel">Sin relación</span>
+          </div>
+          <p class="stakeholder-question">¿Han evaluado Agentforce como motor de automatización?</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 17: Equipo SF asignado -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="17" id="slide-17">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Equipo Salesforce Asignado</h2>
+      <p class="slide-subtitle">Tu equipo de soporte para la cuenta D-local</p>
+      <div class="team-grid">
+        <div class="team-card owner">
+          <div class="team-avatar">JV</div>
+          <h4>Juan Ignacio De Vincenti</h4>
+          <span class="team-role">Named Account Executive (Owner)</span>
+          <span class="team-channel">Cuenta principal</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">GM</div>
+          <h4>Grisel Y. Morales</h4>
+          <span class="team-role">Cloud Account Executive</span>
+          <span class="team-channel">Renovación y Enterprise Plus</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">LE</div>
+          <h4>Lorena Escobar</h4>
+          <span class="team-role">Reseller Account Executive</span>
+          <span class="team-channel">Gestión del reseller</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AC</div>
+          <h4>Alex Carrabba</h4>
+          <span class="team-role">Renewals Manager</span>
+          <span class="team-channel">Renovaciones y true-up</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">GA</div>
+          <h4>Gilberto Almeida</h4>
+          <span class="team-role">Regional Sales Director</span>
+          <span class="team-channel">Sponsor interno</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">PP</div>
+          <h4>Paulo R. Paulino</h4>
+          <span class="team-role">Lead Specialist SE</span>
+          <span class="team-channel">Ingeniería y demos</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AT</div>
+          <h4>Antonio Teixeira Filho</h4>
+          <span class="team-role">Director, Solution Engineering</span>
+          <span class="team-channel">Validación técnica</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 18: SEGUE — AI Strategy -->
+  <!-- ========================================= -->
+  <section class="slide slide-segue" data-slide="18" id="slide-18">
+    <div class="segue-bg"></div>
+    <div class="sf-logo-segue">
+      <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+        <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+    </div>
+    <div class="segue-content">
+      <span class="segue-number">05</span>
+      <h2 class="segue-title">AI Strategy</h2>
+      <p class="segue-subtitle">Estrategia de IA</p>
+    </div>
+    <div class="segue-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 19: Madurez Agéntica -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="19" id="slide-19">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Madurez Agéntica de D-local</h2>
+      <p class="slide-subtitle">🟡 En transición — de automatización reactiva hacia agentes autónomos</p>
+      <div class="maturity-intro">
+        <p>D-local utiliza IA en su core — sistemas propietarios de <strong>Smart Routing</strong> y <strong>Smart Chaining</strong> para la ruta de procesamiento óptima por transacción.</p>
+      </div>
+      <div class="maturity-table">
+        <div class="maturity-header">
+          <span class="mat-col dim">Dimensión</span>
+          <span class="mat-col">Estado Actual</span>
+          <span class="mat-col gap">Gap Identificado</span>
+        </div>
+        <div class="maturity-row">
+          <span class="mat-col dim">IA en core de pagos</span>
+          <span class="mat-col">Smart Routing y Smart Chaining activos</span>
+          <span class="mat-col gap">Falta integración con CRM y comunicación</span>
+        </div>
+        <div class="maturity-row">
+          <span class="mat-col dim">Automatización interna</span>
+          <span class="mat-col">Procesos manuales en KYC, conciliación, soporte</span>
+          <span class="mat-col gap">Oportunidad para Agentforce + MuleSoft</span>
+        </div>
+        <div class="maturity-row">
+          <span class="mat-col dim">Datos unificados</span>
+          <span class="mat-col">Silos entre Montevideo, São Paulo, Singapore, BA</span>
+          <span class="mat-col gap">Data Cloud como tejido conectivo</span>
+        </div>
+        <div class="maturity-row">
+          <span class="mat-col dim">Agentes de IA para comerciantes</span>
+          <span class="mat-col">No implementado</span>
+          <span class="mat-col gap">dLocal for Platforms + Agentforce ACP</span>
+        </div>
+        <div class="maturity-row">
+          <span class="mat-col dim">Cumplimiento EU AI Act</span>
+          <span class="mat-col">Agosto 2026 deadline</span>
+          <span class="mat-col gap">DLP + eDiscovery (Enterprise Grid)</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 20: AI Readiness — Soluciones -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="20" id="slide-20">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">AI Readiness — Ecosistema Salesforce</h2>
+      <p class="slide-subtitle">Soluciones específicas para D-local</p>
+      <div class="ai-solutions-grid">
+        <div class="ai-solution-card">
+          <div class="ai-icon">🤖</div>
+          <h4>Agentforce for Financial Services</h4>
+          <p>Automatizar FAQs complejas y consultas de estado de transacciones de 760+ comerciantes</p>
+          <span class="ai-impact">Libera ejecutivos para tareas de alto valor</span>
+        </div>
+        <div class="ai-solution-card">
+          <div class="ai-icon">⚙️</div>
+          <h4>Agentforce Operations</h4>
+          <p>Resolución autónoma de cuellos de botella en conciliación multi-moneda y disputas</p>
+          <span class="ai-impact">Protege márgenes EBITDA frente a compresión</span>
+        </div>
+        <div class="ai-solution-card">
+          <div class="ai-icon">📈</div>
+          <h4>Sales AI & Sales Agents</h4>
+          <p>Resúmenes automáticos de oportunidades, redacción de correos, alertas de expansión</p>
+          <span class="ai-impact">2X productividad documentada en ventas</span>
+        </div>
+        <div class="ai-solution-card">
+          <div class="ai-icon">☁️</div>
+          <h4>Data Cloud (Zero-Copy)</h4>
+          <p>Vista unificada "Data 360" integrando Google Cloud / Snowflake sin mover datos</p>
+          <span class="ai-impact">Base para decisiones en tiempo real</span>
+        </div>
+        <div class="ai-solution-card featured">
+          <div class="ai-icon">🔮</div>
+          <h4>Protocolo de Comercio Agéntico (ACP)</h4>
+          <p>dLocal como habilitador de pagos autónomos para agentes de IA de consumidores finales</p>
+          <span class="ai-impact">Posiciona a dLocal como infraestructura del futuro agéntico</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 21: BYOP Opportunity -->
+  <!-- ========================================= -->
+  <section class="slide slide-quote" data-slide="21" id="slide-21">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="quote-content">
+      <div class="quote-badge">💎 Oportunidad Estratégica</div>
+      <h2 class="quote-text">Conector BYOP Nativo</h2>
+      <p class="quote-body">Salesforce lanzó arquitectura <strong>Bring Your Own Payments (BYOP)</strong> integrada nativamente con Adyen. Existe una oportunidad única de co-crear con el CTO y VP Producto de dLocal un <strong>conector nativo de dLocal para Salesforce Payments / AppExchange</strong> — posicionando a dLocal como el procesador preferente para miles de comercios enterprise de Salesforce Commerce Cloud que buscan expandirse en LATAM, África y Asia.</p>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 22: SEGUE — Team Alignment -->
+  <!-- ========================================= -->
+  <section class="slide slide-segue" data-slide="22" id="slide-22">
+    <div class="segue-bg"></div>
+    <div class="sf-logo-segue">
+      <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+        <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="rgba(255,255,255,0.2)"/>
+      </svg>
+    </div>
+    <div class="segue-content">
+      <span class="segue-number">06</span>
+      <h2 class="segue-title">Team Alignment</h2>
+      <p class="segue-subtitle">Alineación del Equipo</p>
+    </div>
+    <div class="segue-stars">
+      <div class="star star-1">✦</div>
+      <div class="star star-2">✦</div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 23: Equipo Extendido -->
+  <!-- ========================================= -->
+  <section class="slide slide-content" data-slide="23" id="slide-23">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Equipo Extendido Necesario</h2>
+      <p class="slide-subtitle">Relación de 4+ años — Renovaciones de 812 → 1,600 seats</p>
+      <div class="extended-team-table">
+        <div class="ext-header">
+          <span class="ext-col role-col">Rol</span>
+          <span class="ext-col why-col">Por qué es Necesario</span>
+          <span class="ext-col action-col">Acción de Alineación</span>
+        </div>
+        <div class="ext-row">
+          <span class="ext-col role-col"><strong>SE — Agentforce/Data Cloud</strong></span>
+          <span class="ext-col why-col">Demo técnico para CTO/CISO</span>
+          <span class="ext-col action-col">Coordinar con Paulo R. Paulino / Antonio Teixeira</span>
+        </div>
+        <div class="ext-row">
+          <span class="ext-col role-col"><strong>Industry Advisor – FinTech</strong></span>
+          <span class="ext-col why-col">Posicionar IA en contexto regulatorio</span>
+          <span class="ext-col action-col">Buscar SE de FSI en LATAM</span>
+        </div>
+        <div class="ext-row">
+          <span class="ext-col role-col"><strong>Renewals Manager</strong></span>
+          <span class="ext-col why-col">True-up y expansión a 1,600 seats</span>
+          <span class="ext-col action-col">Alex Carrabba — ya coordinando</span>
+        </div>
+        <div class="ext-row">
+          <span class="ext-col role-col"><strong>Reseller Partner Manager</strong></span>
+          <span class="ext-col why-col">Transición de reseller activa</span>
+          <span class="ext-col action-col">Lorena Escobar coordinando</span>
+        </div>
+        <div class="ext-row">
+          <span class="ext-col role-col"><strong>MuleSoft Specialist</strong></span>
+          <span class="ext-col why-col">Demo KYC y Slack Connect onboarding</span>
+          <span class="ext-col action-col">Identificar specialist en LATAM</span>
+        </div>
+        <div class="ext-row">
+          <span class="ext-col role-col"><strong>Customer Success</strong></span>
+          <span class="ext-col why-col">Medir adoption y caso para Ent. Plus</span>
+          <span class="ext-col action-col">Coordinar con Grisel Morales</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 24: Plan de Alineación -->
+  <!-- ========================================= -->
+  <section class="slide slide-content-white" data-slide="24" id="slide-24">
+    <div class="slide-header">
+      <div class="sf-logo-small">
+        <svg class="sf-cloud-sm" viewBox="0 0 120 80" fill="none">
+          <path d="M97.5 32c0-11-9-20-20-20-3 0-6 .7-8.5 2C65 6 56.5 0 47 0 34.5 0 24.5 9.5 24 21.8 12 23.5 3 33 3 44.5 3 57 13 67 25.5 67h62C99 67 109 57 109 44.5c0-5.5-2-10.5-5.5-14.5" fill="#00B3FF"/>
+        </svg>
+      </div>
+    </div>
+    <div class="content-layout">
+      <h2 class="slide-title">Plan de Alineación & Timeline</h2>
+      <p class="slide-subtitle">Colaboración y validación de la solución</p>
+      <div class="timeline-section">
+        <div class="timeline-phase">
+          <div class="timeline-marker immediate">
+            <span class="timeline-label">Inmediato</span>
+            <span class="timeline-date">Junio 2026</span>
+          </div>
+          <div class="timeline-items">
+            <div class="timeline-item">Reunión de kick-off interna con equipo extendido para alinear estrategia Enterprise Plus</div>
+            <div class="timeline-item">Mapeo completo de stakeholders con @Grisel y @Lorena</div>
+            <div class="timeline-item">Confirmar transición de reseller con @Alex Carrabba</div>
+          </div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-marker short">
+            <span class="timeline-label">Corto Plazo</span>
+            <span class="timeline-date">Q2 FY2027</span>
+          </div>
+          <div class="timeline-items">
+            <div class="timeline-item">Executive Briefing con CTO Hernan Di Chello sobre Agentforce + BYOP</div>
+            <div class="timeline-item">Workshop de DLP y eDiscovery con CISO Javier David</div>
+            <div class="timeline-item">Demo de Data Cloud + Agentforce con Felipe Richard y Agustin Cerisola</div>
+          </div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-marker medium">
+            <span class="timeline-label">Mediano Plazo</span>
+            <span class="timeline-date">Q3 FY2027</span>
+          </div>
+          <div class="timeline-items">
+            <div class="timeline-item">Propuesta formal de co-creación de conector BYOP nativo dLocal</div>
+            <div class="timeline-item">Business Case de migración completa al ecosistema Salesforce</div>
+            <div class="timeline-item">Caso de referencia FinTech LATAM (MODO 🇦🇷, Ueno Bank 🇵🇾)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">Onboarding Certification – Etapa 1 | D-local | FY2027</div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SLIDE 25: THANK YOU -->
+  <!-- ========================================= -->
+  <section class="slide slide-thankyou" data-slide="25" id="slide-25">
+    <div class="thankyou-bg">
+      <div class="cover-gradient"></div>
+      <div class="cover-particles"></div>
+    </div>
+    <div class="thankyou-content">
+      <div class="thankyou-stars">
+        <div class="star star-1">✦</div>
+        <div class="star star-2">✦</div>
+        <div class="star star-3">✦</div>
+      </div>
+      <h1 class="thankyou-title">Thank you</h1>
+      <div class="thankyou-meta">
+        <p class="thankyou-name">Juan Ignacio De Vincenti</p>
+        <p class="thankyou-role">Named Account Executive</p>
+        <p class="thankyou-account">Cuenta: D-local | FY2027</p>
+      </div>
+      <div class="thankyou-logo" style="margin-top: 30px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" style="height: 60px;">
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

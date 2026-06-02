@@ -1963,6 +1963,17 @@ html, body {
   gap: 10px;
 }
 
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.thankyou-logo img {
+  animation: floatLogo 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(0, 179, 255, 0.25));
+}
+
 .sf-cloud-ty {
   width: 44px;
   height: 30px;

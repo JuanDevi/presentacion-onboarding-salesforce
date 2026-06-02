@@ -1374,9 +1374,9 @@ html, body {
 .stakeholder-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px 14px;
+  gap: 14px;
   flex: 1;
-  padding-top: 24px;
+  overflow: hidden;
 }
 
 .stakeholder-card {
@@ -1396,8 +1396,8 @@ html, body {
 }
 
 .stakeholder-avatar {
-  width: 76px;
-  height: 76px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--sf-electric-blue-30), var(--sf-electric-blue-50));
   color: white;
@@ -1405,14 +1405,10 @@ html, body {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
+  margin-bottom: 12px;
   overflow: hidden;
   flex-shrink: 0;
-  position: absolute;
-  top: -24px;
-  right: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  border: 3px solid #fff;
 }
 
 .stakeholder-avatar img {
@@ -1427,8 +1423,8 @@ html, body {
 }
 
 .stakeholder-info {
-  padding-right: 76px;
-  min-height: 56px;
+  min-height: auto;
+  padding-right: 0;
 }
 
 .stakeholder-info h4 {

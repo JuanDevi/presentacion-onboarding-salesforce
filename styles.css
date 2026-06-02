@@ -1396,8 +1396,8 @@ html, body {
 }
 
 .stakeholder-avatar {
-  width: 56px;
-  height: 56px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--sf-electric-blue-30), var(--sf-electric-blue-50));
   color: white;
@@ -1405,8 +1405,8 @@ html, body {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 12px;
+  font-size: 24px;
+  margin-bottom: 16px;
   overflow: hidden;
   flex-shrink: 0;
 }

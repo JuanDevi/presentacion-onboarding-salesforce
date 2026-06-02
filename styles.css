@@ -1113,10 +1113,25 @@ html, body {
 }
 
 .competitor-pos {
-  font-size: 0.78rem;
-  color: rgba(0, 39, 117, 0.6);
+  font-size: 0.85rem;
+  color: var(--sf-slate-gray);
   margin-bottom: 12px;
+}
+
+.competitor-logo-container {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+  min-height: 50px;
+}
+
+.competitor-logo {
+  max-width: 140px;
+  max-height: 48px;
+  object-fit: contain;
+  opacity: 0.9;
 }
 
 .competitor-risk {
